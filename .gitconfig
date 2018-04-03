@@ -1,0 +1,19 @@
+[push]
+  default = current
+[alias]
+  a   = add
+  s   = status
+  c   = commit -m
+  ce  = commit --allow-empty -m
+  ch  = checkout
+  chm = checkout master
+  chf = checkout feature/dev
+  br  = branch
+  df  = diff
+  p   = push
+  pl  = pull
+[user]
+  name  = kobakakzu0429
+  email = kobakazu10@gmail.com
+[core]
+  excludesfile = /Users/kazu/.gitignore_global
