@@ -6,10 +6,8 @@
   c   = commit -m
   ce  = commit --allow-empty -m
   ch  = checkout
-  chm = checkout master
-  chf = checkout feature/dev
-  br  = branch
-  df  = diff
+  b   = branch
+  d   = diff
   p   = push
   pl  = pull
   l   = log -n
