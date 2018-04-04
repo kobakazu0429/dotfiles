@@ -12,6 +12,7 @@
   df  = diff
   p   = push
   pl  = pull
+  l   = log -n
 [user]
   name  = kobakakzu0429
   email = kobakazu10@gmail.com
