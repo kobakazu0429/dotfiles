@@ -1,6 +1,7 @@
 export LANG=en_US.UTF-8
 
-export PATH="$HOME/.rbenv/bin:$HOME/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$/usr/bin/php:$PATH"
 
 export MANPATH="/opt/local/man:$MANPATH"
 
