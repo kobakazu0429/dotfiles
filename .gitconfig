@@ -11,6 +11,7 @@
   p   = push
   pl  = pull
   l   = log -n
+  f   = fetch
 [user]
   name  = kobakakzu0429
   email = kobakazu10@gmail.com
