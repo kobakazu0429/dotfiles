@@ -48,7 +48,7 @@ zstyle ':completion:*:default' menu select=1
 
 # ビープ音の停止
 setopt no_beep
- 
+
 # ビープ音の停止(補完時)
 setopt nolistbeep
 
@@ -61,7 +61,14 @@ alias cdmap="cd ~/workspace/kure_kosen_map"
 
 # git
 alias g="git"
+alias ga="git add"
+alias gb="git branch -a"
+alias gc="git commit -m"
+alias gd="git diff"
+alias gf="git fetch"
 alias gp="git push"
+alias gpl="git pull"
+alias gs="git status"
 
 # python
 alias p="python3"
