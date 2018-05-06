@@ -77,3 +77,7 @@ alias p="python3"
 alias r="rails"
 alias b="bundle"
 alias be="bundle exec"
+
+# sshfs
+alias kosenspacec="sshfs kobakazu0429@kosen.space:/ ~/workspace/kosen.space -o IdentityFile=~/.ssh/kosen_space"
+alias kosenspaceu="diskutil unmount ~/workspace/kosen.space"
