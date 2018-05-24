@@ -1,19 +1,21 @@
 [push]
-  default = current
+  default      = current
 [alias]
-  a   = add
-  s   = status
-  c   = commit -m
-  ce  = commit --allow-empty -m
-  ch  = checkout
-  b   = branch
-  d   = diff
-  p   = push
-  pl  = pull
-  l   = log -n
-  f   = fetch
+  a            = add
+  s            = status
+  c            = commit -m
+  ce           = commit --allow-empty -m
+  ch           = checkout
+  b            = branch
+  d            = diff
+  p            = push
+  pl           = pull
+  l            = log -n
+  f            = fetch
 [user]
-  name  = kobakakzu0429
-  email = kobakazu10@gmail.com
+  name         = kobakakzu0429
+  email        = kobakazu10@gmail.com
 [core]
   excludesfile = /Users/kazu/.gitignore_global
+  pager        = less -cm
+  quotepath    = false
