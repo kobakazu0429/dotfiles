@@ -62,6 +62,7 @@ alias cdmap="cd ~/workspace/kure_kosen_map"
 # git
 alias g="git"
 alias ga="git add"
+alias ga.="git add ."
 alias gb="git branch -a"
 alias gc="git commit -m"
 alias gd="git diff"
@@ -69,6 +70,7 @@ alias gf="git fetch"
 alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
+alias gch="git checkout"
 
 # python
 alias p="python3"
@@ -77,6 +79,7 @@ alias p="python3"
 alias r="rails"
 alias b="bundle"
 alias be="bundle exec"
+alias ber="bundle exec rails"
 
 # sshfs
 alias kosenspacec="sshfs kobakazu0429@kosen.space:/ ~/workspace/kosen.space -o IdentityFile=~/.ssh/kosen_space"
