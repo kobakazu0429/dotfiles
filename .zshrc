@@ -81,3 +81,6 @@ alias be="bundle exec"
 # sshfs
 alias kosenspacec="sshfs kobakazu0429@kosen.space:/ ~/workspace/kosen.space -o IdentityFile=~/.ssh/kosen_space"
 alias kosenspaceu="diskutil unmount ~/workspace/kosen.space"
+
+# Applications
+alias line="open /Applications/LINE.app"
