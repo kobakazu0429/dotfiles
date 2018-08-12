@@ -76,6 +76,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
 alias gch="git checkout"
+alias gopen="open $(git remote -v | head -n 1 | awk '{ print $2 }'| awk -F'[:]' '{ print $2 }'| awk -F'.git' '{ print "https://github.com/" $1 }')"
 
 # python
 alias p="python3"
