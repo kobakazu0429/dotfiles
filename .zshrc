@@ -5,9 +5,12 @@ export PATH="$/usr/bin/php:$PATH"
 
 export MANPATH="/opt/local/man:$MANPATH"
 
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 export ZSH=/Users/kazu/.oh-my-zsh
 
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 
 ZSH_THEME="agnoster"
 
@@ -57,7 +60,8 @@ setopt nolistbeep
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdc="cd ~/workspace/cho_kure_web"
-alias cdmap="cd ~/workspace/kure_kosen_map"
+alias cdm="cd ~/workspace/kure_kosen_map"
+alias cdb="cd ~/workspace/bookrack"
 
 # git
 alias g="git"
