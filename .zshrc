@@ -61,6 +61,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdc="cd ~/workspace/cho_kure_web"
 alias cdm="cd ~/workspace/kure_kosen_map"
+alias cdma="cd ~/workspace/kure_kosen_map_api"
 alias cdb="cd ~/workspace/bookrack"
 
 # git
