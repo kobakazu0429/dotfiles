@@ -7,7 +7,7 @@ export MANPATH="/opt/local/man:$MANPATH"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-export ZSH=/Users/kazu/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
