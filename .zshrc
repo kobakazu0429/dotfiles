@@ -5,6 +5,10 @@ export PATH="$/usr/bin/php:$PATH"
 
 export MANPATH="/opt/local/man:$MANPATH"
 
+export NODEBREW_HOME="$HOME/.nodebrew/current/"
+
+export PATH=$PATH:$NODEBREW_HOME/bin
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 export ZSH=$HOME/.oh-my-zsh
@@ -76,7 +80,17 @@ alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
 alias gch="git checkout"
-alias gopen="open $(git remote -v | head -n 1 | awk '{ print $2 }'| awk -F'[:]' '{ print $2 }'| awk -F'.git' '{ print "https://github.com/" $1 }')"
+# alias gs="cd $(ghq root)/$(ghq list | peco)"
+function asd() {
+  local root=$(ghq root)
+  local repo=$(ghq list | peco)
+  cd "$root/$repo"
+}
+
+function gopen () {
+  local repo=$(git remote -v | head -n 1 | awk -F' ' '{ print $2 }' | awk -F'[:]' '{ print $2 }' | awk -F'.git' '{ print $1 }')
+  open "https://github.com/$repo"
+}
 
 # python
 alias p="python3"
@@ -93,3 +107,25 @@ alias kosenspaceu="diskutil unmount ~/workspace/kosen.space"
 
 # Applications
 alias line="open /Applications/LINE.app"
+
+# diff
+function cdiff () {
+  colordiff $1 $2 -u | less -R
+}
+
+# youtube-dl option:mp3 quality=max
+function youtubemp3 () {
+  youtube-dl $1 -x -f "bestaudio" --audio-format mp3 --audio-quality 0
+}
+
+alias y='yarn $(show-npm-scripts | peco | cut -f 1 -d " ")'
+
+function show-npm-scripts() {
+  cat package.json| jq -r ".scripts | to_entries[] | \"\u001b[33;5m\(.key)\u001b[m\t\(.value)\""  | column -t -s "`printf '\t'`"
+}
+
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.wantedly/bin/:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"

@@ -12,10 +12,22 @@
   pl           = pull
   l            = log -n
   f            = fetch
+	showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
 [user]
-  name         = kobakakzu0429
-  email        = kobakazu10@gmail.com
+	name = kobakakzu0429
+	email = kobakazu10@gmail.com
 [core]
-  excludesfile = /Users/kazu/.gitignore_global
+	excludesfile = /Users/kazu/.gitignore_global
   pager        = less -cm
   quotepath    = false
+[commit]
+	template = /Users/kazu/.stCommitMsg
+#[http]
+#	proxy = socks5://localhost:1080
+[fetch]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
