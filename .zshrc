@@ -121,7 +121,8 @@ function youtubemp3 () {
 alias y='yarn $(show-npm-scripts | peco | cut -f 1 -d " ")'
 
 function show-npm-scripts() {
-  cat package.json| jq -r ".scripts | to_entries[] | \"\u001b[33;5m\(.key)\u001b[m\t\(.value)\""  | column -t -s "`printf '\t'`"
+  # cat package.json| jq -r ".scripts | to_entries[] | \"\u001b[33;5m\(.key)\u001b[m\t\(.value)\"" | column -t -s "`printf '\t'`"
+  cat package.json | jq -r ".scripts | to_entries[] | \"\(.key)\t\(.value)\"" | column -t -s "`printf '\t'`"
 }
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
