@@ -5,9 +5,7 @@ export PATH="$/usr/bin/php:$PATH"
 
 export MANPATH="/opt/local/man:$MANPATH"
 
-export NODEBREW_HOME="$HOME/.nodebrew/current/"
-
-export PATH=$PATH:$NODEBREW_HOME/bin
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
@@ -81,9 +79,12 @@ alias gpl="git pull"
 alias gs="git status"
 alias gch="git checkout"
 # alias gs="cd $(ghq root)/$(ghq list | peco)"
+function ghq-list() {
+  find $(ghq root) -d 3 -maxdepth 3 | sort | grep -v DS_Store | sed -e "s#$(ghq root)/##g"
+}
 function asd() {
   local root=$(ghq root)
-  local repo=$(ghq list | peco)
+  local repo=$(ghq-list | peco)
   cd "$root/$repo"
 }
 
@@ -130,3 +131,4 @@ export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.wantedly/bin/:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
