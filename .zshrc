@@ -114,6 +114,11 @@ function cdiff () {
   colordiff $1 $2 -u | less -R
 }
 
+# youtube-dl option:mp4 quality=max
+function youtubemp4 () {
+  youtube-dl -f bestvideo+bestaudio --merge-output-format mp4 $1
+}
+
 # youtube-dl option:mp3 quality=max
 function youtubemp3 () {
   youtube-dl $1 -x -f "bestaudio" --audio-format mp3 --audio-quality 0
@@ -126,9 +131,19 @@ function show-npm-scripts() {
   cat package.json | jq -r ".scripts | to_entries[] | \"\(.key)\t\(.value)\"" | column -t -s "`printf '\t'`"
 }
 
+function rarr() {
+  // ._?*?.*
+  rar a "$1.rar" "$1" -x"._?.*"
+}
+
+function b6() {
+  node /Users/kazu/dotfiles/base64.js "$1"
+}
+
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.wantedly/bin/:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
